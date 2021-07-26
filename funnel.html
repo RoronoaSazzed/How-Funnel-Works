@@ -19,36 +19,7 @@
         place-items: center;
       }
 
-      @keyframes clipInLeft {
-        0% {
-          clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
-        }
-
-        100% {
-          opacity: 1;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        }
-      }
-
-      @keyframes clipInDown {
-        0% {
-          clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-        }
-
-        100% {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-      }
-
-      @keyframes clipInRight {
-        0% {
-          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-        }
-
-        100% {
-          clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
-        }
-      }
+      /* Black Animation Code */
 
       @keyframes blackLeftToRight {
         0% {
@@ -79,6 +50,8 @@
         }
       }
 
+      /* Black Phases */
+
       #b-start,
       #b-phase-one,
       #b-phase-two,
@@ -96,7 +69,6 @@
 
       #b-phase-three,
       #b-phase-four {
-        transform-box: fill-box;
         animation-name: blackRightToLeft;
         animation-duration: 1s;
         animation-timing-function: ease-in-out;
@@ -104,6 +76,43 @@
         animation-direction: normal;
         animation-fill-mode: forwards;
       }
+
+      /* Black Dots */
+
+      #b-one,
+      #b-two,
+      #b-eight,
+      #b-nine {
+        animation-name: blackLeftToRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      #b-three,
+      #b-seven {
+        animation-name: blackTopToBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      #b-four,
+      #b-five,
+      #b-six {
+        animation-name: blackRightToLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      /* Black Animation Delay */
 
       #b-phase-one {
         animation-delay: 2s;
@@ -133,162 +142,7 @@
         animation-delay: 16s;
       }
 
-      #start,
-      #phase-one,
-      #phase-two,
-      #phase-three,
-      #phase-four,
-      #phase-five,
-      #phase-six,
-      #the-end {
-        transform-box: fill-box;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-      }
-
-      #phase-one {
-        animation-delay: 2s;
-      }
-
-      #phase-two {
-        animation-delay: 4s;
-      }
-
-      #phase-three {
-        animation-delay: 7s;
-      }
-
-      #phase-four {
-        animation-delay: 9s;
-      }
-
-      #phase-five {
-        animation-delay: 12s;
-      }
-
-      #phase-six {
-        animation-delay: 14s;
-      }
-
-      #the-end {
-        animation-delay: 16s;
-      }
-
-      #one,
-      #two,
-      #eight,
-      #nine,
-      #start,
-      #phase-one,
-      #phase-two,
-      #phase-five,
-      #phase-six,
-      #the-end {
-        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
-        animation-name: clipInLeft;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-      }
-
-      #b-one,
-      #b-two,
-      #b-eight,
-      #b-nine {
-        animation-name: blackLeftToRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-      }
-
-      #three,
-      #seven {
-        animation-name: clipInDown;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-      }
-
-      #b-three,
-      #b-seven {
-        animation-name: blackTopToBottom;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-      }
-
-      #four,
-      #five,
-      #six,
-      #phase-three,
-      #phase-four {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-        animation-name: clipInRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-      }
-
-      #b-four,
-      #b-five,
-      #b-six {
-        animation-name: blackRightToLeft;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-      }
-
-      #one {
-        animation-delay: 1s;
-      }
-
-      #two {
-        animation-delay: 3s;
-      }
-
-      #three {
-        animation-delay: 5s;
-      }
-
-      #four {
-        animation-delay: 6s;
-      }
-
-      #five {
-        animation-delay: 8s;
-      }
-
-      #six {
-        animation-delay: 10s;
-      }
-
-      #seven {
-        animation-delay: 11s;
-      }
-
-      #eight {
-        animation-delay: 13s;
-      }
-
-      #nine {
-        animation-delay: 15s;
-      }
+      /* Black Dots Delay */
 
       #b-one {
         animation-delay: 1s;
@@ -323,6 +177,172 @@
       }
 
       #b-nine {
+        animation-delay: 15s;
+      }
+
+      /* Cyan Animation Code */
+
+      @keyframes clipInLeft {
+        0% {
+          clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        }
+
+        100% {
+          opacity: 1;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+      }
+
+      @keyframes clipInDown {
+        0% {
+          clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+        }
+
+        100% {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+
+      @keyframes clipInRight {
+        0% {
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        }
+
+        100% {
+          clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+      }
+
+      /* Cyan Phases */
+
+      #start,
+      #phase-one,
+      #phase-two,
+      #phase-five,
+      #phase-six,
+      #the-end {
+        transform-box: fill-box;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      #phase-three,
+      #phase-four {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        animation-name: clipInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      /* Cyan Dots */
+
+      #one,
+      #two,
+      #eight,
+      #nine {
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        animation-name: clipInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      #three,
+      #seven {
+        animation-name: clipInDown;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+      }
+
+      #four,
+      #five,
+      #six {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        animation-name: clipInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      /* Cyan Animation Delay */
+
+      #phase-one {
+        animation-delay: 2s;
+      }
+
+      #phase-two {
+        animation-delay: 4s;
+      }
+
+      #phase-three {
+        animation-delay: 7s;
+      }
+
+      #phase-four {
+        animation-delay: 9s;
+      }
+
+      #phase-five {
+        animation-delay: 12s;
+      }
+
+      #phase-six {
+        animation-delay: 14s;
+      }
+
+      #the-end {
+        animation-delay: 16s;
+      }
+
+      /* Cyan Dots Delay */
+
+      #one {
+        animation-delay: 1s;
+      }
+
+      #two {
+        animation-delay: 3s;
+      }
+
+      #three {
+        animation-delay: 5s;
+      }
+
+      #four {
+        animation-delay: 6s;
+      }
+
+      #five {
+        animation-delay: 8s;
+      }
+
+      #six {
+        animation-delay: 10s;
+      }
+
+      #seven {
+        animation-delay: 11s;
+      }
+
+      #eight {
+        animation-delay: 13s;
+      }
+
+      #nine {
         animation-delay: 15s;
       }
     </style>
